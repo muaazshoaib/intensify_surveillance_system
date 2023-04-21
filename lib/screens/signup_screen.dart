@@ -9,8 +9,6 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   final _formKey = GlobalKey<FormState>();
-  late String _email;
-  late String _password;
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +31,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   }
                   return null;
                 },
-                onSaved: (value) {
-                  _email = value!;
-                },
+                onSaved: (value) {},
               ),
               TextFormField(
                 decoration: const InputDecoration(labelText: 'Password'),
@@ -46,9 +42,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   }
                   return null;
                 },
-                onSaved: (value) {
-                  _password = value!;
-                },
+                onSaved: (value) {},
               ),
               const SizedBox(height: 16),
               ElevatedButton(
