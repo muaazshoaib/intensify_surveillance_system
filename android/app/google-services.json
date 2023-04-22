@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "322648537523",
+    "project_id": "intensify-surveillance-s-28127",
+    "storage_bucket": "intensify-surveillance-s-28127.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322648537523:android:a87892d80ff664845873c6",
+        "android_client_info": {
+          "package_name": "com.example.intensify_surveillance_system"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322648537523-5at3ll4njice3f6poi1m2kr22g643j58.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCojCCAeNno_8vp8LfKseAyki8YZRoZzkc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322648537523-5at3ll4njice3f6poi1m2kr22g643j58.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

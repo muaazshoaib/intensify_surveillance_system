@@ -1,38 +1,26 @@
-import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:intensify_surveillance_system/screens/display_picture_screen.dart';
-import 'package:intensify_surveillance_system/screens/forgotten_password_screen.dart';
-import 'package:intensify_surveillance_system/screens/home_screen.dart';
-import 'package:intensify_surveillance_system/screens/login_screen.dart';
-import 'package:intensify_surveillance_system/screens/signup_screen.dart';
-import 'package:intensify_surveillance_system/screens/splash_screen.dart';
-import 'package:intensify_surveillance_system/screens/take_picture_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:intensify_surveillance_system/pages/splash_page.dart';
+
+import 'firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  cameras = await availableCameras();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const IntensifySurveillanceSystem());
 }
 
 class IntensifySurveillanceSystem extends StatelessWidget {
   const IntensifySurveillanceSystem({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/splash',
-      routes: {
-        '/splash': (context) => const SplashScreen(),
-        '/home': (context) => const HomeScreen(),
-        '/login': (context) => const LoginScreen(),
-        '/signup': (context) => const SignUpScreen(),
-        '/forgotten_password': (context) => const ForgottenPasswordScreen(),
-        '/take_picture_screen': (context) => const TakePictureScreen(),
-        '/display_picture_screen': (context) => const DisplayPictureScreen(
-              imagePath: '',
-            ),
-      },
+      home: SplashPage(),
     );
   }
 }
