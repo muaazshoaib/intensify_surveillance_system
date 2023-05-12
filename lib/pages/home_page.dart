@@ -9,7 +9,7 @@ import '../components/my_body_text.dart';
 import '../components/my_button.dart';
 import '../components/my_heading.dart';
 import '../models.dart';
-import 'detect_screen.dart';
+import 'detect_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -35,6 +35,12 @@ class _HomePageState extends State<HomePage> {
           model: "assets/yolov2_tiny.tflite",
           labels: "assets/yolov2_tiny.txt",
         );
+
+        // res = await Tflite.loadModel(
+        //   model: "assets/custom_object_detection_yolov8_best_float16.tflite",
+        //   labels: "assets/custom_object_detection_yolov8_best_float16.txt",
+        // );
+
         break;
 
       case mobilenet:
